@@ -17,7 +17,7 @@ export const NAV_LINKS = [
   { label: 'Contact', href: '#contact' },
 ]
 
-export const MENU_CATEGORIES = ['All', 'Starters', 'Parathas', 'Dal', 'Sabzi', 'Paneer Special', 'Sides', 'Breads', 'Rice', 'Beverages']
+export const MENU_CATEGORIES = ['All', 'Starters', 'Parathas', 'Dal', 'Sabzi', 'Paneer Special', 'Sides', 'Roti', 'Rice', 'Beverages']
 
 export const DISHES = [
   // Starters
@@ -28,7 +28,7 @@ export const DISHES = [
     price: 'Rs. 10',
     description: 'Crispy papad',
     category: 'Starters',
-    image: 'https://images.pexels.com/photos/34739831/pexels-photo-34739831.jpeg?cs=srgb&dl=pexels-drmkhawarnazir-34739831.jpg&fm=jpg',
+    image: 'https://5.imimg.com/data5/FX/VW/SO/SELLER-78728074/masala-appalam-papad-1000x1000.jpg',
   },
   {
     id: 2,
@@ -46,7 +46,7 @@ export const DISHES = [
     price: 'Rs. 100',
     description: 'Crispy crushed papad with onions and spices',
     category: 'Starters',
-    image: 'https://images.pexels.com/photos/34347890/pexels-photo-34347890.jpeg?cs=srgb&dl=pexels-shyamsrivastava-34347890.jpg&fm=jpg',
+    image: 'https://i.ytimg.com/vi/SfyrU3KflSg/maxresdefault.jpg',
   },
   {
     id: 4,
@@ -55,7 +55,7 @@ export const DISHES = [
     price: 'Rs. 80',
     description: 'Crispy onion fritters',
     category: 'Starters',
-    image: 'https://unsplash.com/photos/inz8vyeEumY/download?force=true',
+    image: 'https://img.freepik.com/premium-photo/crispy-kanda-bhaji-bhajji-pyaj-pakode-fried-onion-pakora-delicious-street-food-from-india_466689-73024.jpg?w=2000',
   },
   {
     id: 5,
@@ -64,7 +64,7 @@ export const DISHES = [
     price: 'Rs. 100',
     description: 'Crispy paneer fritters',
     category: 'Starters',
-    image: 'https://images.pexels.com/photos/8585763/pexels-photo-8585763.jpeg?cs=srgb&dl=pexels-mukesh-kumar-76103954-8585763.jpg&fm=jpg',
+    image: 'https://i.pinimg.com/736x/6d/3c/94/6d3c94a067ad19e20b0db74bc85a720d.jpg',
   },
   // Parathas
   {
@@ -74,7 +74,7 @@ export const DISHES = [
     price: 'Rs. 50',
     description: 'Plain paratha',
     category: 'Parathas',
-    image: 'https://images.pexels.com/photos/36704398/pexels-photo-36704398.jpeg?cs=srgb&dl=pexels-amjad-ali-2159823888-36704398.jpg&fm=jpg',
+    image: 'https://img.freepik.com/premium-photo/aloo-paratha-white-background_1059083-1146.jpg',
   },
   {
     id: 7,
@@ -83,7 +83,7 @@ export const DISHES = [
     price: 'Rs. 80',
     description: 'Spiced paratha',
     category: 'Parathas',
-    image: 'https://images.pexels.com/photos/33428723/pexels-photo-33428723.jpeg?cs=srgb&dl=pexels-shootsaga-33428723.jpg&fm=jpg',
+    image: 'https://tse4.mm.bing.net/th/id/OIP.H_LtSY4qc9vc_L-bgYbBAQHaE8?w=3072&h=2048&rs=1&pid=ImgDetMain&o=7&rm=3',
   },
   {
     id: 8,
@@ -92,7 +92,7 @@ export const DISHES = [
     price: 'Rs. 100',
     description: 'Spiced paratha with ghee',
     category: 'Parathas',
-    image: 'https://images.pexels.com/photos/35079286/pexels-photo-35079286.jpeg?cs=srgb&dl=pexels-drmkhawarnazir-35079286.jpg&fm=jpg',
+    image: 'https://tse4.mm.bing.net/th/id/OIP.H_LtSY4qc9vc_L-bgYbBAQHaE8?w=3072&h=2048&rs=1&pid=ImgDetMain&o=7&rm=3',
   },
   {
     id: 9,
@@ -110,7 +110,7 @@ export const DISHES = [
     price: 'Rs. 120',
     description: 'Paneer stuffed paratha with ghee',
     category: 'Parathas',
-    image: 'https://images.pexels.com/photos/28885201/pexels-photo-28885201.jpeg?cs=srgb&dl=pexels-vladimir-waikar-1959075778-28885201.jpg&fm=jpg',
+    image: 'https://images.pexels.com/photos/12737919/pexels-photo-12737919.jpeg?cs=srgb&dl=pexels-dhiraj-jain-207743066-12737919.jpg&fm=jpg',
   },
   // Dal
   {
@@ -120,7 +120,7 @@ export const DISHES = [
     price: 'Rs. 150',
     description: 'Yellow dal tempered with desi ghee and cumin',
     category: 'Dal',
-    image: 'https://images.pexels.com/photos/33379362/pexels-photo-33379362.jpeg?cs=srgb&dl=pexels-masuma-rahaman-437541976-33379362.jpg&fm=jpg',
+    image: 'https://tse3.mm.bing.net/th/id/OIP.U0jSXW04EMGfXcnOFEtrmgHaE7?w=626&h=417&rs=1&pid=ImgDetMain&o=7&rm=3',
   },
   {
     id: 12,
@@ -129,7 +129,7 @@ export const DISHES = [
     price: 'Rs. 140',
     description: 'Lightly tempered yellow dal',
     category: 'Dal',
-    image: 'https://images.pexels.com/photos/28675074/pexels-photo-28675074.jpeg?cs=srgb&dl=pexels-kunal-lakhotia-781256899-28675074.jpg&fm=jpg',
+    image: 'https://holycowvegan.net/wp-content/uploads/2022/09/dal-recipe-3-768x946.jpg',
   },
   {
     id: 13,
@@ -138,7 +138,7 @@ export const DISHES = [
     price: 'Rs. 140',
     description: 'Split black gram dal',
     category: 'Dal',
-    image: 'https://images.pexels.com/photos/37182514/pexels-photo-37182514.jpeg?cs=srgb&dl=pexels-drmkhawarnazir-37182514.jpg&fm=jpg',
+    image: 'https://cdn.fastpixel.io/fp/ret_img+v_c49c+w_800+h_530+q_lossless+to_webp/www.wholygoodness.com/wp-content/uploads/2024/11/Urad-Dal-Recipe-Dhaba-Style-800x530.jpg',
   },
   {
     id: 14,
@@ -147,7 +147,7 @@ export const DISHES = [
     price: 'Rs. 190',
     description: 'Creamy black lentils slow-cooked with butter',
     category: 'Dal',
-    image: 'https://images.pexels.com/photos/28674555/pexels-photo-28674555.jpeg?cs=srgb&dl=pexels-kunal-lakhotia-781256899-28674555.jpg&fm=jpg',
+    image: 'https://www.kuchpakrahahai.in/wp-content/uploads/2016/08/DSC_3812_WM.jpg',
   },
   // Sabzi
   {
@@ -157,7 +157,7 @@ export const DISHES = [
     price: 'Rs. 140',
     description: 'Potato and peas curry',
     category: 'Sabzi',
-    image: 'https://images.pexels.com/photos/33643313/pexels-photo-33643313.jpeg?cs=srgb&dl=pexels-pinaki-panda-3019803-33643313.jpg&fm=jpg',
+    image: 'https://tse1.mm.bing.net/th/id/OIP.cXP9-hpwGoENul1lmd324gHaHa?w=500&h=500&rs=1&pid=ImgDetMain&o=7&rm=3',
   },
   {
     id: 16,
@@ -166,7 +166,7 @@ export const DISHES = [
     price: 'Rs. 140',
     description: 'Cauliflower in spiced gravy',
     category: 'Sabzi',
-    image: 'https://images.pexels.com/photos/35071824/pexels-photo-35071824.jpeg?cs=srgb&dl=pexels-miltonphotography-35071824.jpg&fm=jpg',
+    image: 'https://i0.wp.com/aartimadan.com/wp-content/uploads/2020/11/gobi-aloo.jpg?resize=768%2C431&ssl=1',
   },
   {
     id: 17,
@@ -175,7 +175,7 @@ export const DISHES = [
     price: 'Rs. 140',
     description: 'Crispy okra fry',
     category: 'Sabzi',
-    image: 'https://images.pexels.com/photos/35008222/pexels-photo-35008222.jpeg?cs=srgb&dl=pexels-rajani33-3567470-35008222.jpg&fm=jpg',
+    image: 'https://i.ytimg.com/vi/bS-19BSPP6Y/maxresdefault.jpg',
   },
   {
     id: 18,
@@ -184,7 +184,7 @@ export const DISHES = [
     price: 'Rs. 140',
     description: 'Kidney beans curry',
     category: 'Sabzi',
-    image: 'https://images.pexels.com/photos/12737912/pexels-photo-12737912.jpeg?cs=srgb&dl=pexels-dhiraj-jain-207743066-12737912.jpg&fm=jpg',
+    image: 'https://www.indianhealthyrecipes.com/wp-content/uploads/2015/11/rajma-recipe-1.jpg',
   },
   {
     id: 19,
@@ -193,7 +193,7 @@ export const DISHES = [
     price: 'Rs. 140',
     description: 'Spiced chickpea curry',
     category: 'Sabzi',
-    image: 'https://images.pexels.com/photos/29066704/pexels-photo-29066704.jpeg?cs=srgb&dl=pexels-sabyasachi-das-45419624-29066704.jpg&fm=jpg',
+    image: 'https://img.freepik.com/premium-photo/chana-chat-indian-chickpea-charm_960396-189003.jpg?w=996',
   },
   {
     id: 20,
@@ -202,7 +202,7 @@ export const DISHES = [
     price: 'Rs. 140',
     description: 'Sprouted moth beans curry',
     category: 'Sabzi',
-    image: 'https://images.pexels.com/photos/8479384/pexels-photo-8479384.jpeg?cs=srgb&dl=pexels-anntarazevich-8479384.jpg&fm=jpg',
+    image: 'https://tse2.mm.bing.net/th/id/OIP.5HHSgwhVT9b_WpOZ7IFjgQHaEA?rs=1&pid=ImgDetMain&o=7&rm=3',
   },
   {
     id: 21,
@@ -211,7 +211,7 @@ export const DISHES = [
     price: 'Rs. 140',
     description: 'Crispy gram flour fritters',
     category: 'Sabzi',
-    image: 'https://images.pexels.com/photos/33104648/pexels-photo-33104648.jpeg?cs=srgb&dl=pexels-pinaki-panda-3019803-33104648.jpg&fm=jpg',
+    image: 'https://i.ytimg.com/vi/LQ4iBAJzh3I/maxresdefault.jpg',
   },
   {
     id: 22,
@@ -220,7 +220,7 @@ export const DISHES = [
     price: 'Rs. 140',
     description: 'Sev in vegetable curry',
     category: 'Sabzi',
-    image: 'https://images.pexels.com/photos/20408461/pexels-photo-20408461.jpeg?cs=srgb&dl=pexels-jack-baghel-2199968-20408461.jpg&fm=jpg',
+    image: 'https://images.picxy.com/cache/2020/8/16/1d9c09b229e82486c330230e691e821d.jpg',
   },
   {
     id: 23,
@@ -229,7 +229,7 @@ export const DISHES = [
     price: 'Rs. 140',
     description: 'Potato tempered with cumin',
     category: 'Sabzi',
-    image: 'https://images.pexels.com/photos/33643313/pexels-photo-33643313.jpeg?cs=srgb&dl=pexels-pinaki-panda-3019803-33643313.jpg&fm=jpg',
+    image: 'https://static.toiimg.com/thumb/125268612.jpg?imgsize=1601144&photoid=125268612&width=600&height=335&resizemode=75',
   },
   {
     id: 24,
@@ -238,7 +238,7 @@ export const DISHES = [
     price: 'Rs. 140',
     description: 'Spicy tomato chutney',
     category: 'Sabzi',
-    image: 'https://images.pexels.com/photos/17424800/pexels-photo-17424800.jpeg?cs=srgb&dl=pexels-lunarly-83082820-17424800.jpg&fm=jpg',
+    image: 'https://5.imimg.com/data5/EG/UU/XP/SELLER-28418997/mixed-pickle-500x500.jpg',
   },
   {
     id: 25,
@@ -247,7 +247,7 @@ export const DISHES = [
     price: 'Rs. 140',
     description: 'Smoked eggplant mash',
     category: 'Sabzi',
-    image: 'https://images.pexels.com/photos/36458544/pexels-photo-36458544.jpeg?cs=srgb&dl=pexels-drmkhawarnazir-36458544.jpg&fm=jpg',
+    image: 'https://www.indianhealthyrecipes.com/wp-content/uploads/2020/09/baingan-bharta.jpg',
   },
   {
     id: 26,
@@ -256,7 +256,7 @@ export const DISHES = [
     price: 'Rs. 140',
     description: 'Traditional Maharashtrian gram flour curry',
     category: 'Sabzi',
-    image: 'https://images.pexels.com/photos/37420999/pexels-photo-37420999.jpeg?cs=srgb&dl=pexels-kunal-lakhotia-781256899-37420999.jpg&fm=jpg',
+    image: 'https://th.bing.com/th/id/R.791ddf9c8d8d7f98bb0b451c56981ac9?rik=TZiOlPoL8rVRgw&riu=http%3a%2f%2fblog.kesargrocery.com%2fwp-content%2fuploads%2f2023%2f02%2fbaigan-bharta-hindi-vangyache-bharit-marathi-is-roasted-mashed-eggplant-fry-curry-favourite-maharashtrian-menu-served-tawa-selective-focus.jpg&ehk=GdB06jW6RzsMCjCTIeuAwKVRRdQlajZVNFUeUHYYN0k%3d&risl=&pid=ImgRaw&r=0',
   },
   {
     id: 27,
@@ -265,7 +265,7 @@ export const DISHES = [
     price: 'Rs. 140',
     description: 'Fenugreek leaves fry',
     category: 'Sabzi',
-    image: 'https://images.pexels.com/photos/13513758/pexels-photo-13513758.jpeg?cs=srgb&dl=pexels-sagar-konduri-298000195-13513758.jpg&fm=jpg',
+    image: 'https://www.theintrepideater.com/wp-content/uploads/2023/07/DSC_0254-4.jpg',
   },
   {
     id: 28,
@@ -274,7 +274,7 @@ export const DISHES = [
     price: 'Rs. 140',
     description: 'Bitter gourd fry',
     category: 'Sabzi',
-    image: 'https://images.pexels.com/photos/13569982/pexels-photo-13569982.jpeg?cs=srgb&dl=pexels-davide-nunziata-312594342-13569982.jpg&fm=jpg',
+    image: 'https://smithakalluraya.com/wp-content/uploads/2022/08/air-fry-botter-gourd-chips.jpg',
   },
   {
     id: 29,
@@ -283,7 +283,7 @@ export const DISHES = [
     price: 'Rs. 150',
     description: 'Plain spinach curry',
     category: 'Sabzi',
-    image: 'https://images.pexels.com/photos/8625813/pexels-photo-8625813.jpeg?cs=srgb&dl=pexels-pranjall-kumar-150768-8625813.jpg&fm=jpg',
+    image: 'https://img.freepik.com/premium-photo/lasooni-palak-recipe-dhaba-style-garlic-spinach-curry-indian-main-course-served-with-naan_466689-85138.jpg',
   },
   {
     id: 30,
@@ -292,7 +292,7 @@ export const DISHES = [
     price: 'Rs. 150',
     description: 'Potato in rich gravy',
     category: 'Sabzi',
-    image: 'https://images.pexels.com/photos/33643298/pexels-photo-33643298.jpeg?cs=srgb&dl=pexels-pinaki-panda-3019803-33643298.jpg&fm=jpg',
+    image: 'https://www.lifeberrys.com/img/article/pyaz-1671791839-lb.jpg',
   },
   {
     id: 31,
@@ -301,7 +301,7 @@ export const DISHES = [
     price: 'Rs. 160',
     description: 'Seasonal vegetables in spiced tomato gravy',
     category: 'Sabzi',
-    image: 'https://images.unsplash.com/photo-1565299624946-b28f40a0ca4b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80',
+    image: 'https://foodfusion.com/wp-content/uploads/2019/06/Dhabba-style-mix-sabzi-Recipe-by-Food-fusion-4.jpg',
   },
   // Paneer Special
   {
@@ -311,7 +311,7 @@ export const DISHES = [
     price: 'Rs. 200',
     description: 'Paneer with fenugreek leaves',
     category: 'Paneer Special',
-    image: 'https://images.unsplash.com/photo-1585937421612-70a008356fbe?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80',
+    image: 'https://www.scrumptiously.com/wp-content/uploads/2025/01/MethiPaneer.webp',
   },
   {
     id: 33,
@@ -320,7 +320,7 @@ export const DISHES = [
     price: 'Rs. 200',
     description: 'Paneer in rich buttery tomato gravy',
     category: 'Paneer Special',
-    image: 'https://images.unsplash.com/photo-1631452180519-c014fe946bc7?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80',
+    image: 'https://www.ruchiskitchen.com/wp-content/uploads/2020/12/Paneer-butter-masala-recipe-3-500x375.jpg',
   },
   {
     id: 34,
@@ -329,7 +329,7 @@ export const DISHES = [
     price: 'Rs. 170',
     description: 'Paneer in spiced onion-tomato gravy',
     category: 'Paneer Special',
-    image: 'https://images.unsplash.com/photo-1601050690597-df0568f70950?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80',
+    image: 'https://indianfoods.co.in/wp-content/uploads/2024/02/paneer-tikka-masa-600x450.jpg',
   },
   {
     id: 35,
@@ -338,7 +338,7 @@ export const DISHES = [
     price: 'Rs. 170',
     description: 'Paneer in creamy spinach gravy',
     category: 'Paneer Special',
-    image: 'https://images.unsplash.com/photo-1601050690597-df0568f70950?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80',
+    image: 'https://i.pinimg.com/originals/3d/04/d0/3d04d008b34df3abe0f7a943c47d883c.jpg',
   },
   {
     id: 36,
@@ -347,7 +347,7 @@ export const DISHES = [
     price: 'Rs. 220',
     description: 'Scrambled paneer with spices and onions',
     category: 'Paneer Special',
-    image: 'https://images.unsplash.com/photo-1585937421612-70a008356fbe?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80',
+    image: 'https://tse1.mm.bing.net/th/id/OIP.oFzfpNoFJgP-1djVG_X-EQHaHa?rs=1&pid=ImgDetMain&o=7&rm=3',
   },
   // Sides
   {
@@ -357,7 +357,7 @@ export const DISHES = [
     price: 'Rs. 60',
     description: 'Fresh salad',
     category: 'Sides',
-    image: 'https://images.unsplash.com/photo-1512621776951-a57141f2eefd?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80',
+    image: 'https://i.ytimg.com/vi/ZZsYgaFGB5E/maxresdefault.jpg',
   },
   {
     id: 38,
@@ -366,7 +366,7 @@ export const DISHES = [
     price: 'Rs. 60',
     description: 'Fresh curd',
     category: 'Sides',
-    image: 'https://images.unsplash.com/photo-1550583724-b2692b85b150?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80',
+    image: 'https://cookandsee.in/wp-content/uploads/2018/07/curd-1-750x515.jpg',
   },
   {
     id: 39,
@@ -375,17 +375,17 @@ export const DISHES = [
     price: 'Rs. 110',
     description: 'Curd tempered with spices',
     category: 'Sides',
-    image: 'https://images.unsplash.com/photo-1550583724-b2692b85b150?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80',
+    image: 'https://i.ytimg.com/vi/3Zwdm6TXX4Q/maxresdefault.jpg',
   },
-  // Breads
+  // Roti
   {
     id: 40,
     name: 'रोटी',
     nameEn: 'Roti',
     price: 'Rs. 20',
     description: 'Whole wheat roti',
-    category: 'Breads',
-    image: 'https://images.unsplash.com/photo-1565299624946-b28f40a0ca4b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80',
+    category: 'Roti',
+    image: 'https://cdn.mos.cms.futurecdn.net/z9yrzoMFd7hcFnvjzNjv5P.jpg',
   },
   {
     id: 41,
@@ -393,8 +393,8 @@ export const DISHES = [
     nameEn: 'Ghee Roti',
     price: 'Rs. 30',
     description: 'Roti brushed with ghee',
-    category: 'Breads',
-    image: 'https://images.unsplash.com/photo-1565299624946-b28f40a0ca4b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80',
+    category: 'Roti',
+    image: 'https://i.pinimg.com/736x/cf/38/2e/cf382ef1b71efdadb829b643348cc52d.jpg',
   },
   {
     id: 42,
@@ -402,8 +402,8 @@ export const DISHES = [
     nameEn: 'Bhakar',
     price: 'Rs. 35',
     description: 'Jowar roti',
-    category: 'Breads',
-    image: 'https://images.unsplash.com/photo-1585937421612-70a008356fbe?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80',
+    category: 'Roti',
+    image: 'https://img.freepik.com/premium-photo/sweet-roti-made-out-rice-flour-jaggery-ghee-gud-ki-roti-gur-ki-roti-jaggery-bhakri-meethi-gud-ki-roti-winter-food-copy-space_466689-81267.jpg',
   },
   {
     id: 43,
@@ -411,8 +411,8 @@ export const DISHES = [
     nameEn: 'Ghee Bhakar',
     price: 'Rs. 45',
     description: 'Jowar roti with ghee',
-    category: 'Breads',
-    image: 'https://images.unsplash.com/photo-1585937421612-70a008356fbe?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80',
+    category: 'Roti',
+    image: 'https://img.freepik.com/premium-photo/sweet-roti-made-out-rice-flour-jaggery-ghee-gud-ki-roti-gur-ki-roti-jaggery-bhakri-meethi-gud-ki-roti-winter-food-copy-space_466689-81267.jpg',
   },
   {
     id: 44,
@@ -420,7 +420,7 @@ export const DISHES = [
     nameEn: 'Bhakar Gravy',
     price: 'Rs. 120',
     description: 'Bhakar with gravy',
-    category: 'Breads',
+    category: 'Roti',
     image: 'https://images.unsplash.com/photo-1565299624946-b28f40a0ca4b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80',
   },
   // Rice
@@ -431,7 +431,7 @@ export const DISHES = [
     price: 'Rs. 120',
     description: 'Plain steamed rice',
     category: 'Rice',
-    image: 'https://images.unsplash.com/photo-1536304993881-ff6e9aef0805?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80',
+    image: 'https://tse2.mm.bing.net/th/id/OIP.RxSAGm_MzAk0e2Sj-9LIaQAAAA?w=300&h=300&rs=1&pid=ImgDetMain&o=7&rm=3',
   },
   {
     id: 46,
@@ -440,7 +440,7 @@ export const DISHES = [
     price: 'Rs. 140',
     description: 'Rice tempered with cumin',
     category: 'Rice',
-    image: 'https://www.vegrecipesofindia.com/wp-content/uploads/2018/11/jeera-rice-recipe.jpg',
+    image: 'https://i.pinimg.com/736x/fd/ad/03/fdad03f17363536a0989eeaa78113928.jpg',
   },
   {
     id: 47,
@@ -449,7 +449,7 @@ export const DISHES = [
     price: 'Rs. 160',
     description: 'Spiced rice',
     category: 'Rice',
-    image: 'https://www.vegrecipesofindia.com/wp-content/uploads/2018/11/masala-rice-recipe.jpg',
+    image: 'https://th.bing.com/th/id/R.12653fdc5b8c3fd8baa09233a2fa0278?rik=8f8Y22k96eYNdQ&riu=http%3a%2f%2fhebbarskitchen.com%2fwp-content%2fuploads%2fmainPhotos%2fmasala-rice-recipe-vegetable-spiced-rice-spiced-rice-with-leftover-rice-2.jpeg&ehk=e2wZA5%2bxfUSiv5%2bCaoAao2QIoi%2bdcoRvrHwNH%2b8PSGg%3d&risl=&pid=ImgRaw&r=0',
   },
   {
     id: 48,
@@ -458,7 +458,7 @@ export const DISHES = [
     price: 'Rs. 160',
     description: 'Vegetable pulao',
     category: 'Rice',
-    image: 'https://www.vegrecipesofindia.com/wp-content/uploads/2018/11/veg-pulao-recipe.jpg',
+    image: 'https://i.pinimg.com/736x/be/f5/71/bef571d59b7ea0e74435e25ceeeb7d81.jpg',
   },
   {
     id: 49,
@@ -467,7 +467,7 @@ export const DISHES = [
     price: 'Rs. 180',
     description: 'Paneer pulao',
     category: 'Rice',
-    image: 'https://www.vegrecipesofindia.com/wp-content/uploads/2018/11/paneer-pulao-recipe.jpg',
+    image: 'https://manjulaskitchen.com/wp-content/uploads/paneer_pulao.jpg',
   },
   {
     id: 50,
@@ -476,7 +476,7 @@ export const DISHES = [
     price: 'Rs. 160',
     description: 'Rice and lentil khichdi',
     category: 'Rice',
-    image: 'https://www.vegrecipesofindia.com/wp-content/uploads/2018/11/khichdi-recipe.jpg',
+    image: 'https://tse4.mm.bing.net/th/id/OIP.wblvAHjIIPB-C_zk8h7SMgHaGE?rs=1&pid=ImgDetMain&o=7&rm=3',
   },
   // Beverages
   {
@@ -486,7 +486,7 @@ export const DISHES = [
     price: 'Rs. 20',
     description: 'Spiced buttermilk',
     category: 'Beverages',
-    image: 'https://www.vegrecipesofindia.com/wp-content/uploads/2018/11/taak-recipe.jpg',
+    image: 'https://tse1.mm.bing.net/th/id/OIP.QJSAGyjuuxtKLNQlgE-dDwHaFX?rs=1&pid=ImgDetMain&o=7&rm=3',
   },
   {
     id: 52,
@@ -495,7 +495,7 @@ export const DISHES = [
     price: 'Rs. 30',
     description: 'Fresh sweet lassi',
     category: 'Beverages',
-    image: 'https://www.vegrecipesofindia.com/wp-content/uploads/2018/11/lassi-recipe.jpg',
+    image: 'https://thumbs.dreamstime.com/b/masala-buttermilk-drink-chaas-made-yogurt-served-glass-over-rustic-wooden-background-refreshing-summer-days-223998722.jpg',
   },
 ]
 
