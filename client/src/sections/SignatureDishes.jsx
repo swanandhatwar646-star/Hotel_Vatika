@@ -10,14 +10,16 @@ import { DISHES, MENU_CATEGORIES } from '../utils/constants'
 import { staggerContainer, staggerItem } from '../utils/motionVariants'
 import { imageZoomHover } from '../animations/hoverAnimations'
 
-const DishCard = ({ dish }) => {
+const DishCard = ({ dish, compact = false }) => {
   const [hovered, setHovered] = useState(false)
 
   return (
     <div
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
-      className="bg-cream border border-gold/20 rounded-2xl overflow-hidden group cursor-pointer"
+      className={`bg-cream border border-gold/20 overflow-hidden group cursor-pointer ${
+        compact ? 'rounded-xl' : 'rounded-2xl'
+      }`}
       style={{
         boxShadow: hovered
           ? '0 20px 60px rgba(200,167,106,0.2)'
@@ -27,7 +29,7 @@ const DishCard = ({ dish }) => {
       }}
     >
       {/* Image */}
-      <div className="relative overflow-hidden aspect-[4/3]">
+      <div className={`relative overflow-hidden ${compact ? 'aspect-square' : 'aspect-[4/3]'}`}>
         <img
           src={dish.image}
           alt={dish.nameEn}
@@ -40,27 +42,45 @@ const DishCard = ({ dish }) => {
           style={{ opacity: hovered ? 1 : 0 }}
         />
         {/* Category tag */}
-        <div className="absolute top-3 left-3">
-          <span className="bg-forest/80 backdrop-blur-sm text-cream text-xs px-3 py-1 rounded-full font-body tracking-wide">
+        <div className={compact ? 'absolute top-2 left-2 right-2' : 'absolute top-3 left-3'}>
+          <span
+            className={`inline-block max-w-full truncate bg-forest/80 backdrop-blur-sm text-cream rounded-full font-body tracking-wide ${
+              compact ? 'text-[10px] px-2 py-0.5' : 'text-xs px-3 py-1'
+            }`}
+          >
             {dish.category}
           </span>
         </div>
       </div>
 
       {/* Info */}
-      <div className="p-4">
-        <div className="flex items-start justify-between mb-1">
+      <div className={compact ? 'p-3' : 'p-4'}>
+        <div className={compact ? 'mb-1' : 'flex items-start justify-between mb-1'}>
           <div className="flex-1">
-            <h3 className="font-display text-lg font-semibold text-charcoal leading-tight">
+            <h3
+              className={`font-display font-semibold text-charcoal leading-tight ${
+                compact ? 'text-base line-clamp-2' : 'text-lg'
+              }`}
+            >
               {dish.name}
             </h3>
-            <p className="font-body text-charcoal/70 text-xs mt-0.5">{dish.nameEn}</p>
+            <p className={`font-body text-charcoal/70 mt-0.5 ${compact ? 'text-[11px] truncate' : 'text-xs'}`}>
+              {dish.nameEn}
+            </p>
           </div>
-          <div className="flex items-center gap-1 ml-2">
-            <span className="font-body font-semibold text-forest text-base whitespace-nowrap">{dish.price}</span>
+          <div className={compact ? 'mt-1' : 'flex items-center gap-1 ml-2'}>
+            <span className={`font-body font-semibold text-forest whitespace-nowrap ${compact ? 'text-sm' : 'text-base'}`}>
+              {dish.price}
+            </span>
           </div>
         </div>
-        <p className="font-body text-charcoal/55 text-xs leading-relaxed">{dish.description}</p>
+        <p
+          className={`font-body text-charcoal/55 leading-relaxed ${
+            compact ? 'text-[11px] line-clamp-2' : 'text-xs'
+          }`}
+        >
+          {dish.description}
+        </p>
       </div>
     </div>
   )
@@ -160,9 +180,9 @@ const SignatureDishes = () => {
         </div>
 
         {/* Mobile Grid */}
-        <div className="md:hidden grid grid-cols-1 gap-4">
+        <div className="md:hidden grid grid-cols-2 gap-3">
           {paginatedDishes.map((dish) => (
-            <DishCard key={dish.id} dish={dish} />
+            <DishCard key={dish.id} dish={dish} compact />
           ))}
         </div>
 
