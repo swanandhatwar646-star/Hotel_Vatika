@@ -1,32 +1,13 @@
-import { useState } from 'react'
-import { motion, AnimatePresence } from 'framer-motion'
-import { Swiper, SwiperSlide } from 'swiper/react'
-import { Navigation, Pagination, A11y } from 'swiper/modules'
-import 'swiper/css'
-import 'swiper/css/navigation'
-import 'swiper/css/pagination'
+import { memo, useMemo, useState } from 'react'
 import SectionTitle from '../components/ui/SectionTitle'
 import { DISHES, MENU_CATEGORIES } from '../utils/constants'
-import { staggerContainer, staggerItem } from '../utils/motionVariants'
-import { imageZoomHover } from '../animations/hoverAnimations'
 
-const DishCard = ({ dish, compact = false }) => {
-  const [hovered, setHovered] = useState(false)
-
+const DishCard = memo(({ dish, compact = false }) => {
   return (
     <div
-      onMouseEnter={() => setHovered(true)}
-      onMouseLeave={() => setHovered(false)}
-      className={`bg-cream border border-gold/20 overflow-hidden group cursor-pointer ${
+      className={`bg-cream border border-gold/20 overflow-hidden group cursor-pointer shadow-[0_4px_20px_rgba(0,0,0,0.06)] transition-transform transition-shadow duration-300 ease-out md:hover:-translate-y-2 md:hover:shadow-[0_20px_60px_rgba(200,167,106,0.2)] ${
         compact ? 'rounded-xl' : 'rounded-2xl'
       }`}
-      style={{
-        boxShadow: hovered
-          ? '0 20px 60px rgba(200,167,106,0.2)'
-          : '0 4px 20px rgba(0,0,0,0.06)',
-        transform: hovered ? 'translateY(-8px)' : 'translateY(0)',
-        transition: 'all 0.35s cubic-bezier(0.22,1,0.36,1)',
-      }}
     >
       {/* Image */}
       <div className={`relative overflow-hidden ${compact ? 'aspect-square' : 'aspect-[4/3]'}`}>
@@ -35,12 +16,10 @@ const DishCard = ({ dish, compact = false }) => {
           alt={dish.nameEn}
           className="w-full h-full object-cover"
           loading="lazy"
+          decoding="async"
         />
         {/* Warm overlay on hover */}
-        <div
-          className="absolute inset-0 bg-gradient-to-t from-gold/30 to-transparent transition-opacity duration-300"
-          style={{ opacity: hovered ? 1 : 0 }}
-        />
+        <div className="absolute inset-0 bg-gradient-to-t from-gold/30 to-transparent opacity-0 transition-opacity duration-300 md:group-hover:opacity-100" />
         {/* Category tag */}
         <div className={compact ? 'absolute top-2 left-2 right-2' : 'absolute top-3 left-3'}>
           <span
@@ -84,7 +63,9 @@ const DishCard = ({ dish, compact = false }) => {
       </div>
     </div>
   )
-}
+})
+
+DishCard.displayName = 'DishCard'
 
 const SignatureDishes = () => {
   const [selectedCategory, setSelectedCategory] = useState('All')
@@ -92,20 +73,33 @@ const SignatureDishes = () => {
   const [currentPage, setCurrentPage] = useState(1)
   const ITEMS_PER_PAGE = 12
 
+  const normalizedSearch = searchQuery.trim().toLowerCase()
+
+  const categoryCounts = useMemo(() => {
+    return DISHES.reduce((counts, dish) => {
+      counts[dish.category] = (counts[dish.category] || 0) + 1
+      return counts
+    }, {})
+  }, [])
+
   // Filter dishes based on category and search
-  const filteredDishes = DISHES.filter((dish) => {
-    const matchesCategory = selectedCategory === 'All' || dish.category === selectedCategory
-    const matchesSearch = searchQuery === '' ||
-      dish.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
-      dish.nameEn.toLowerCase().includes(searchQuery.toLowerCase())
-    return matchesCategory && matchesSearch
-  })
+  const filteredDishes = useMemo(() => {
+    return DISHES.filter((dish) => {
+      const matchesCategory = selectedCategory === 'All' || dish.category === selectedCategory
+      const matchesSearch = normalizedSearch === '' ||
+        dish.name.toLowerCase().includes(normalizedSearch) ||
+        dish.nameEn.toLowerCase().includes(normalizedSearch)
+      return matchesCategory && matchesSearch
+    })
+  }, [normalizedSearch, selectedCategory])
 
   // Calculate pagination for "All" category only
   const totalPages = Math.ceil(filteredDishes.length / ITEMS_PER_PAGE)
-  const paginatedDishes = selectedCategory === 'All'
-    ? filteredDishes.slice((currentPage - 1) * ITEMS_PER_PAGE, currentPage * ITEMS_PER_PAGE)
-    : filteredDishes
+  const paginatedDishes = useMemo(() => {
+    return selectedCategory === 'All'
+      ? filteredDishes.slice((currentPage - 1) * ITEMS_PER_PAGE, currentPage * ITEMS_PER_PAGE)
+      : filteredDishes
+  }, [currentPage, filteredDishes, selectedCategory])
 
   // Reset to page 1 when category changes
   const handleCategoryChange = (category) => {
@@ -154,7 +148,7 @@ const SignatureDishes = () => {
                 {category}
                 {category !== 'All' && (
                   <span className="ml-2 text-xs opacity-70">
-                    ({DISHES.filter(d => d.category === category).length})
+                    ({categoryCounts[category] || 0})
                   </span>
                 )}
               </button>
