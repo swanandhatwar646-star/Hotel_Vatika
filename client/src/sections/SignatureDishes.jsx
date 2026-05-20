@@ -1,4 +1,4 @@
-import { memo, useMemo, useState } from 'react'
+import { memo, useEffect, useMemo, useRef, useState } from 'react'
 import SectionTitle from '../components/ui/SectionTitle'
 import { DISHES, MENU_CATEGORIES } from '../utils/constants'
 
@@ -71,6 +71,8 @@ const SignatureDishes = () => {
   const [selectedCategory, setSelectedCategory] = useState('All')
   const [searchQuery, setSearchQuery] = useState('')
   const [currentPage, setCurrentPage] = useState(1)
+  const menuContentRef = useRef(null)
+  const shouldScrollAfterPageChange = useRef(false)
   const ITEMS_PER_PAGE = 12
 
   const normalizedSearch = searchQuery.trim().toLowerCase()
@@ -107,20 +109,34 @@ const SignatureDishes = () => {
     setCurrentPage(1)
   }
 
-  const scrollToMenuTop = () => {
+  useEffect(() => {
+    if (!shouldScrollAfterPageChange.current) return
+
+    shouldScrollAfterPageChange.current = false
+
     requestAnimationFrame(() => {
-      document.getElementById('menu')?.scrollIntoView({
+      const target = menuContentRef.current
+      if (!target) return
+
+      const navbarOffset = window.innerWidth < 768 ? 76 : 88
+      const targetTop = target.getBoundingClientRect().top + window.scrollY - navbarOffset
+
+      window.scrollTo({
+        top: Math.max(targetTop, 0),
         behavior: 'smooth',
-        block: 'start',
       })
     })
-  }
+  }, [currentPage])
 
   const handlePageChange = (page) => {
     if (page === currentPage) return
 
+    if (document.activeElement instanceof HTMLElement) {
+      document.activeElement.blur()
+    }
+
+    shouldScrollAfterPageChange.current = true
     setCurrentPage(page)
-    scrollToMenuTop()
   }
 
   return (
@@ -129,7 +145,7 @@ const SignatureDishes = () => {
       <div className="absolute top-0 right-0 w-64 h-64 rounded-full bg-gold/5 blur-3xl pointer-events-none" />
       <div className="absolute bottom-0 left-0 w-64 h-64 rounded-full bg-forest/5 blur-3xl pointer-events-none" />
 
-      <div className="max-w-7xl mx-auto">
+      <div ref={menuContentRef} className="max-w-7xl mx-auto">
         <SectionTitle eyebrow="Our" title="COMPLETE MENU" />
 
         {/* Search Bar */}
